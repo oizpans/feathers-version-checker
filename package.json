@@ -1,0 +1,27 @@
+{
+  "name": "feathers-version-checker",
+  "version": "0.0.1",
+  "description": "check app version via feathers hook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oizpans/feathers-version-checker.git"
+  },
+  "keywords": [
+    "version",
+    "check"
+  ],
+  "author": "snapzio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oizpans/feathers-version-checker/issues"
+  },
+  "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
+  "dependencies": {
+    "feathers-hooks-common": "^4.14.1",
+    "version_checker": "git+https://github.com/oizpans/version_checker.git"
+  }
+}
