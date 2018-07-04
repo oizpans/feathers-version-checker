@@ -1,4 +1,5 @@
 const { checkVersion } = require('version_checker');
+const { paramsForServer } = require('feathers-hooks-common');
 
 module.exports.checkForLatestVersion = function(appVersion) {
   return function(context){
