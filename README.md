@@ -1,5 +1,5 @@
 # feathers-version-checker
-feathers-version-checker is a feathers based custom hooks function that allows you to check if your app is in current version by passing current app version to the server.
+feathers-version-checker is a feathers based custom hooks function that allows you to check if your app is in updated version by passing the current app version to the hooks.
 
 <h4> Installation </h4>
 
@@ -18,7 +18,7 @@ module.exports = {
   before: {
     all: [
       paramsFromClient('currentAppVersion'),
-      latestVersionResponse('1.2.3')
+      latestVersionResponse('1.2.3') // REQUIRED MINIMUM APP VERSION
     ],
     find: [],
     get: [],
@@ -38,7 +38,7 @@ const { checkForLatestVersion } = require('feathers-version-checker');
 app.hooks({
   before:{
     all:[
-      checkForLatestVersion('1.5.0')
+      checkForLatestVersion('1.5.0') // CURRENT APP VERSION
     ]
   }
 });
