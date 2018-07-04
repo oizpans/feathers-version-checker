@@ -9,7 +9,7 @@ module.exports.checkForLatestVersion = function(appVersion) {
       throw new Error("Function 'checkForLatestVersion' must contain a parameter e.g checkForLatestVersion('1.2.0')");
     } else {
       let { params } = context;
-      const { query } = paramsForServer({currentAppVersion: '1.2.9'});
+      const { query } = paramsForServer({currentAppVersion: appVersion});
       params.query = {...params.query, ...query};
       return context;
     }
