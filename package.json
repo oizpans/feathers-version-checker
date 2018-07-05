@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
-    "@feathersjs/errors": "^3.3.0",
+    "feathers-errors": "^2.9.2",
     "feathers-hooks-common": "^4.14.1",
     "version_checker": "git+https://github.com/oizpans/version_checker.git"
   }

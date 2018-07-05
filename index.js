@@ -1,6 +1,6 @@
 const { checkVersion } = require('version_checker');
 const { paramsForServer } = require('feathers-hooks-common');
-const errors = require('@feathersjs/errors');
+const errors = require('feathers-errors');
 
 module.exports.checkForLatestVersion = function(appVersion) {
   return async function(context){
@@ -28,7 +28,7 @@ module.exports.latestVersionResponse = function(minimumVersion) {
         if(checkVersion({currentAppVersion: context.params.currentAppVersion, minimumRequiredAppVersion: minimumVersion}).updated) {
           return context;
         } else {
-          new errors.BadRequest('OUTDATED', {
+          throw new errors.BadRequest('OUTDATED', {
             outdated: true
           });
         }
