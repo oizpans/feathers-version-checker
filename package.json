@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx babel /src/index.js --presets=env,stage-0 -o index.js"
+    "build": "npx babel src --presets=env,stage-0 -o index.js"
   },
   "repository": {
     "type": "git",
