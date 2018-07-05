@@ -1,3 +1,4 @@
+require("babel-polyfill");
 const { checkVersion } = require('version_checker');
 const { paramsForServer } = require('feathers-hooks-common');
 const errors = require('feathers-errors');
