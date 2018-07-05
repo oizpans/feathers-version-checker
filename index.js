@@ -2,7 +2,7 @@ const { checkVersion } = require('version_checker');
 const { paramsForServer } = require('feathers-hooks-common');
 
 module.exports.checkForLatestVersion = function(appVersion) {
-  return function(context){
+  return async function(context){
     if(typeof context === 'undefined') {
       throw new Error('Context is not defined!');
     } else if(typeof appVersion === 'undefined' || appVersion === '') {
@@ -17,7 +17,7 @@ module.exports.checkForLatestVersion = function(appVersion) {
 };
 
 module.exports.latestVersionResponse = function(minimumVersion) {
-  return function(context){
+  return async function(context){
     if(typeof context === 'undefined') {
       throw new Error('Context is not defined!');
     } else if(typeof minimumVersion === 'undefined' || minimumVersion === '') {
