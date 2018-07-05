@@ -1,6 +1,6 @@
 {
   "name": "feathers-version-checker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "check app version via feathers hook",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
+    "@feathersjs/errors": "^3.3.0",
     "feathers-hooks-common": "^4.14.1",
     "version_checker": "git+https://github.com/oizpans/version_checker.git"
   }
