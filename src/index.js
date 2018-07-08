@@ -1,6 +1,8 @@
-const { checkVersion } = require('version_checker');
-const { paramsForServer } = require('feathers-hooks-common');
-const errors = require('feathers-errors');
+var { checkVersion } = require('version_checker');
+var { paramsForServer } = require('feathers-hooks-common');
+var errors = require('feathers-errors');
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 module.exports.checkForLatestVersion = function(appVersion) {
   return async function(context){
@@ -10,8 +12,9 @@ module.exports.checkForLatestVersion = function(appVersion) {
       throw new Error("Function 'checkForLatestVersion' must contain a parameter e.g checkForLatestVersion('1.2.0')");
     } else {
       let { params } = context;
-      const { query } = paramsForServer({currentAppVersion: appVersion});
-      params.query = {...params.query, ...query};
+      var { query } = paramsForServer({currentAppVersion: appVersion});
+      // params.query = {...params.query, ...query};
+      params.query = _extends({}, params.query, query);
       return context;
     }
   }
