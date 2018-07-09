@@ -52,7 +52,7 @@ const { checkForLatestVersion } = require('feathers-version-checker');
 app.service('users').hooks({
   before: {
     all: [
-      checkForLatestVersion(DeviceInfo.getVersion())
+      checkForLatestVersion('1.5.0')
     ]
   }
 });
