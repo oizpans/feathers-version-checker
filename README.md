@@ -3,22 +3,21 @@ feathers-version-checker is a feathers based custom hooks function that allows y
 
 <h4> Installation </h4>
 
-`npm install git+https://github.com/oizpans/feathers-version-checker.git`
+```$ npm install git+https://github.com/oizpans/feathers-version-checker.git```
 
 <h4> Server Implementation </h4>
 
 In your app.hooks.js or users.hooks.js or any hooks you want, you can use it this way:
 
 ```
-const pfc = require('feathers-hooks-common');
-const { latestVersionResponse } = require('feathers-version-checker');
-const { paramsFromClient } = pfc;
+const {paramsFromClient } = require('feathers-hooks-common');
+const { Server } = require('feathers-version-checker');
 
 module.exports = {
   before: {
     all: [
       paramsFromClient('currentAppVersion'),
-      latestVersionResponse('1.2.3') // REQUIRED MINIMUM APP VERSION
+      Server('1.2.3') // REQUIRED MINIMUM APP VERSION
     ],
     find: [],
     get: [],
@@ -33,12 +32,12 @@ module.exports = {
 <h4> Client Implementation </h4>
 
 ```
-const { checkForLatestVersion } = require('feathers-version-checker');
+const { Client } = require('feathers-version-checker');
 
 app.hooks({
   before:{
     all:[
-      checkForLatestVersion('1.5.0') // CURRENT APP VERSION
+      Client('1.5.0') // CURRENT APP VERSION
     ]
   }
 });
@@ -47,12 +46,12 @@ app.hooks({
 <h4> Adding it in a specific service in client </h4>
 
 ```
-const { checkForLatestVersion } = require('feathers-version-checker');
+const { Client } = require('feathers-version-checker');
 
 app.service('users').hooks({
   before: {
     all: [
-      checkForLatestVersion('1.5.0')
+      Client('1.5.0')
     ]
   }
 });
