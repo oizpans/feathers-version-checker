@@ -11,10 +11,9 @@ module.exports.checkForLatestVersion = function(appVersion) {
     } else if(typeof appVersion === 'undefined' || appVersion === '') {
       throw new Error("Function 'checkForLatestVersion' must contain a parameter e.g checkForLatestVersion('1.2.0')");
     } else {
-      let { params } = context;
+      var { params } = context;
       var { query } = paramsForServer({currentAppVersion: appVersion});
-      // params.query = {...params.query, ...query};
-      params.query = _extends({}, params.query, query);
+      params.query = _extends({}, query, params.query);
       return context;
     }
   }
