@@ -7,7 +7,7 @@ feathers-version-checker is a feathers based custom hooks function that allows y
 
 <h4> Server Implementation </h4>
 
-In your app.hooks.js you can use it this way:
+In your app.hooks.js or users.hooks.js or any hooks you want, you can use it this way:
 
 ```
 const pfc = require('feathers-hooks-common');
@@ -39,6 +39,20 @@ app.hooks({
   before:{
     all:[
       checkForLatestVersion('1.5.0') // CURRENT APP VERSION
+    ]
+  }
+});
+```
+
+<h4> Adding it in a specific service in client </h4>
+
+```
+const { checkForLatestVersion } = require('feathers-version-checker');
+
+app.service('users').hooks({
+  before: {
+    all: [
+      checkForLatestVersion(DeviceInfo.getVersion())
     ]
   }
 });
