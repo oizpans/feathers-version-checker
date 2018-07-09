@@ -1,15 +1,8 @@
-// Application hooks that run for every service
-const { paramsFromClient } = require('feathers-hooks-common');
-const log = require('./hooks/log');
-const {Server} = require('../../../lib');
+
 
 module.exports = {
   before: {
-    all: [
-      log(),
-      paramsFromClient('currentAppVersion'),
-      Server('1.2.0')
-    ],
+    all: [],
     find: [],
     get: [],
     create: [],
@@ -19,7 +12,7 @@ module.exports = {
   },
 
   after: {
-    all: [ log() ],
+    all: [],
     find: [],
     get: [],
     create: [],
@@ -29,7 +22,7 @@ module.exports = {
   },
 
   error: {
-    all: [ log() ],
+    all: [],
     find: [],
     get: [],
     create: [],

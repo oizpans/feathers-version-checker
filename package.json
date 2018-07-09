@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx babel src --presets=env,stage-0 -o index.js",
-    "lint": "eslint src",
+    "lint": "eslint lib",
     "lint-fix": "eslint lib --fix"
   },
   "repository": {
@@ -29,14 +28,11 @@
     "version_checker": "git+https://github.com/oizpans/version_checker.git"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jest": "^21.17.0",
-    "eslint-plugin-no-else": "^0.2.2"
+    "eslint-plugin-no-else": "^0.2.2",
+    "nodemon": "^1.17.5"
   }
 }

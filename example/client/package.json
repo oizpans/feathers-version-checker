@@ -1,0 +1,35 @@
+{
+  "name": "version-checker-example",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "rod",
+    "email": "rod@snapzio.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^8.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "client": "nodemon client"
+  },
+  "dependencies": {
+    "@feathersjs/feathers": "^3.1.7",
+    "@feathersjs/rest-client": "^1.4.1",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
