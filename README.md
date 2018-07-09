@@ -3,13 +3,15 @@ feathers-version-checker is a feathers based custom hooks function that allows y
 
 <h4> Installation </h4>
 
-```$ npm install git+https://github.com/oizpans/feathers-version-checker.git```
+```ssh 
+$ npm install git+https://github.com/oizpans/feathers-version-checker.git
+```
 
 <h4> Server Implementation </h4>
 
 In your app.hooks.js or users.hooks.js or any hooks you want, you can use it this way:
 
-```
+```js
 const {paramsFromClient } = require('feathers-hooks-common');
 const { Server } = require('feathers-version-checker');
 
@@ -31,7 +33,7 @@ module.exports = {
 
 <h4> Client Implementation </h4>
 
-```
+```js
 const { Client } = require('feathers-version-checker');
 
 app.hooks({
@@ -45,7 +47,7 @@ app.hooks({
 
 <h4> Adding it in a specific service in client </h4>
 
-```
+```js
 const { Client } = require('feathers-version-checker');
 
 app.service('users').hooks({
