@@ -18,14 +18,10 @@ module.exports = {
   before: {
     all: [
       paramsFromClient('currentAppVersion'),
-      Server('1.2.3') // REQUIRED MINIMUM APP VERSION
+      Server('1.2.3') // Required minimum App version
     ],
     find: [],
-    get: [],
-    create: [],
-    update: [],
-    patch: [],
-    remove: []
+    ...
   }
  };
 ```
@@ -39,8 +35,9 @@ const { Client } = require('feathers-version-checker');
 app.hooks({
   before:{
     all:[
-      Client('1.5.0') // CURRENT APP VERSION
+      Client('1.5.0') // Current App version
     ]
+    ...
   }
 });
 ```
