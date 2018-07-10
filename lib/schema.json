@@ -1,0 +1,11 @@
+{
+  "currentAppVersion": {
+    "type": "string"
+  },
+  "minimumRequiredAppVersion": {
+    "type": "string"
+  },
+  "minimumRequiredAppVersionForServer": {
+    "type": "string"
+  }
+}
