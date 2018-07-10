@@ -27,8 +27,7 @@
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
     "feathers-errors": "^2.9.2",
-    "feathers-hooks-common": "^4.14.1",
-    "version_checker": "git+https://github.com/oizpans/version_checker.git"
+    "feathers-hooks-common": "^4.14.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
