@@ -7,6 +7,7 @@
   "extends": "airbnb-base",
   "plugins": ["jest","no-else"],
   "rules": {
+    "max-depth": ["error", 3],
     "no-else/no-else": 2,
     "indent": [
       "error",
