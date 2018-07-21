@@ -27,15 +27,15 @@
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
     "feathers-errors": "^2.9.2",
-    "feathers-hooks-common": "^4.14.1"
+    "feathers-hooks-common": "^4.14.3"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-no-else": "^0.2.2",
-    "jest": "^23.4.0",
-    "jest-cli": "^23.4.0"
+    "jest": "^23.4.1",
+    "jest-cli": "^23.4.1"
   }
 }
