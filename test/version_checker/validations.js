@@ -8,7 +8,7 @@ module.exports = function Validations() {
       };
       const result = checkVersion(versionData);
 
-      expect(result.updated).toBe(true);
+      expect(result.updated).toBe(false);
       expect(result.incompatible).toEqual([]);
     });
   });
