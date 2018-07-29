@@ -7,7 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "jest": "jest",
+    "jest-local": "nodemon -x 'jest'",
+    "test": "npm run lint && npm run jest",
     "lint": "eslint lib",
     "lint-fix": "eslint lib --fix"
   },
@@ -27,13 +29,14 @@
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
     "feathers-errors": "^2.9.2",
-    "feathers-hooks-common": "^4.14.1"
+    "feathers-hooks-common": "^4.15.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.17.0",
-    "eslint-plugin-no-else": "^0.2.2"
+    "eslint-plugin-jest": "^21.18.0",
+    "eslint-plugin-no-else": "^0.2.2",
+    "nodemon": "^1.18.3"
   }
 }
