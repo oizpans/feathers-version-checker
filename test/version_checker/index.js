@@ -34,5 +34,17 @@ module.exports = function VersionChecker() {
       expect(result.updated).toEqual(false);
       expect(result.incompatible).toContainEqual({ with: 'minimumAllowedAppVersion', changes: 'MAJOR' });
     });
+
+    test('With UPDATED client', () => {
+      const dataVersion = {
+        currentAppVersion: '2.1.0',
+        minimumRequiredAppVersion: '2.0.0',
+      };
+
+      const result = checkVersion(dataVersion);
+
+      expect(result.updated).toEqual(true);
+      expect(result.incompatible).toEqual([]);
+    });
   });
 };
