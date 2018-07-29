@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
+    "debug": "^3.1.0",
     "feathers-errors": "^2.9.2",
     "feathers-hooks-common": "^4.15.0"
   },
