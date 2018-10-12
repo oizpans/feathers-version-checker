@@ -57,14 +57,26 @@ module.exports = function VersionChecker() {
     });
 
     test('With higher versions', () => {
-      const dataVersion = {
+      const dataVersion1 = {
         currentAppVersion: '3.1.0',
         minimumRequiredAppVersion,
       };
+      const dataVersion2 = {
+        currentAppVersion: '2.3.0',
+        minimumRequiredAppVersion,
+      };
+      const dataVersion3 = {
+        currentAppVersion: '2.2.5',
+        minimumRequiredAppVersion,
+      };
 
-      const result = checkVersion(dataVersion);
+      const result1 = checkVersion(dataVersion1);
+      const result2 = checkVersion(dataVersion2);
+      const result3 = checkVersion(dataVersion3);
 
-      expect(result).toEqual({ updated: true });
+      expect(result1).toEqual({ updated: true });
+      expect(result2).toEqual({ updated: true });
+      expect(result3).toEqual({ updated: true });
     });
 
     test('With invalid input', () => {
