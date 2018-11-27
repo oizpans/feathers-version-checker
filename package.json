@@ -28,18 +28,18 @@
   },
   "homepage": "https://github.com/oizpans/feathers-version-checker#readme",
   "dependencies": {
-    "debug": "^3.1.0",
-    "feathers-errors": "^2.9.2",
-    "feathers-hooks-common": "^4.15.0"
+    "debug": "3.1.0",
+    "feathers-errors": "2.9.2",
+    "feathers-hooks-common": "4.15.0"
   },
   "devDependencies": {
-    "@feathersjs/feathers": "^3.2.3",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.18.0",
-    "eslint-plugin-no-else": "^0.2.2",
-    "jest": "^23.4.2",
-    "nodemon": "^1.18.3"
+    "@feathersjs/feathers": "3.2.3",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "13.0.0",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-jest": "21.18.0",
+    "eslint-plugin-no-else": "0.2.2",
+    "jest": "23.4.2",
+    "nodemon": "1.18.3"
   }
 }
